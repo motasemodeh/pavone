@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -8,6 +8,7 @@ import HotCollections from './components/HotCollections';
 import HowItWorks from './components/HowItWorks';
 import Footer from './components/Footer';
 import QuotePage from './pages/QuotePage';
+import AllProductsPage from './pages/AllProductsPage';
 
 import { motion } from 'framer-motion';
 
@@ -34,7 +35,7 @@ const HomePage = () => {
         <TopVendors />
       </motion.div>
       <motion.div {...fadeInUp}>
-        <ProductGrid onContact={handleContact} />
+        <ProductGrid onContact={handleContact} limit={4} />
       </motion.div>
       <motion.div {...fadeInUp}>
         <HotCollections />
@@ -53,6 +54,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/products" element={<AllProductsPage />} />
           <Route path="/quote" element={<QuotePage />} />
         </Routes>
         <Footer />

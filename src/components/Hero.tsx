@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './Hero.css';
 
 // Import assets
@@ -36,8 +36,6 @@ const Hero = () => {
               </div>
             </div>
           ))}
-          <div className="nav-arrow left">‹</div>
-          <div className="nav-arrow right">›</div>
         </div>
       </div>
     </section>

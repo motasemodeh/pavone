@@ -1,5 +1,5 @@
 .hot-collections {
-  padding: 80px 0;
+  padding: 40px 0;
 }
 
 .collections-swiper {
@@ -12,13 +12,14 @@
   border-radius: 15px;
   overflow: hidden;
   text-align: center;
-  transition: 0.3s;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.4s ease, box-shadow 0.4s ease;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
 .collection-card:hover {
   border-color: var(--primary-color);
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
 
 .collection-image {
@@ -64,4 +65,27 @@
   font-size: 0.85rem;
   color: var(--text-muted);
   font-weight: 600;
+}
+
+.collections-swiper .swiper-button-next, 
+.collections-swiper .swiper-button-prev {
+  background: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--text-main) !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border: 1px solid var(--border-color);
+}
+
+.collections-swiper .swiper-button-next:after, 
+.collections-swiper .swiper-button-prev:after {
+  font-size: 1rem !important;
+}
+
+@media (max-width: 768px) {
+  .collections-swiper .swiper-button-next, 
+  .collections-swiper .swiper-button-prev {
+    display: none !important;
+  }
 }

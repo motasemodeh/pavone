@@ -1,7 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/navigation';
 import './TopVendors.css';
 
 const vendors = [
@@ -27,19 +26,15 @@ const TopVendors = () => {
           <h2 className="section-title">
             Top Sellers in <span className="time-filter">30 days <i className="chevron-down"></i></span>
           </h2>
-          <div className="section-controls">
-             <select className="filter-select">
-                <option>All categories</option>
-             </select>
-          </div>
         </div>
         
         <Swiper
-          modules={[Navigation, Autoplay]}
+          modules={[Autoplay]}
           spaceBetween={20}
           slidesPerView={1.5}
-          autoplay={{ delay: 3000 }}
-          navigation
+          loop={true}
+          speed={3000}
+          autoplay={{ delay: 0, disableOnInteraction: false }}
           breakpoints={{
             640: { slidesPerView: 2.5 },
             1024: { slidesPerView: 4 },

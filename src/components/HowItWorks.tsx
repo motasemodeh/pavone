@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Wallet, ImagePlus, Tag } from 'lucide-react';
 import './HowItWorks.css';
 
