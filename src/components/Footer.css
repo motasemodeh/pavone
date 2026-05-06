@@ -1,0 +1,117 @@
+.footer {
+  background: #f8f8f8;
+  padding: 80px 0 30px;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-main);
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  gap: 50px;
+  margin-bottom: 60px;
+}
+
+.footer-logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-col p {
+  color: var(--text-muted);
+  max-width: 300px;
+}
+
+.footer-col h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.footer-col ul li {
+  margin-bottom: 12px;
+}
+
+.footer-col ul a {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.footer-col ul a:hover {
+  color: var(--primary-color);
+  padding-left: 5px;
+}
+
+.newsletter-col p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.newsletter-form {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.newsletter-form input {
+  flex: 1;
+  background: white;
+  border: 1px solid var(--border-color);
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+  padding: 12px 15px;
+  color: var(--text-main);
+}
+
+.newsletter-form button {
+  background: var(--accent-gradient);
+  color: white;
+  padding: 0 20px;
+  border-radius: 0 5px 5px 0;
+  font-size: 1.2rem;
+}
+
+.small-text {
+  font-size: 0.8rem !important;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-links svg {
+  cursor: pointer;
+  transition: 0.3s;
+  color: var(--text-muted);
+}
+
+.social-links svg:hover {
+  color: var(--primary-color);
+}
+
+@media (max-width: 1024px) {
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+}

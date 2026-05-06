@@ -1,0 +1,100 @@
+.top-vendors {
+  padding: 80px 0;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.time-filter {
+  color: var(--primary-color);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.chevron-down::after {
+  content: '▾';
+  font-size: 0.8rem;
+  vertical-align: middle;
+}
+
+.filter-select {
+  background: transparent;
+  color: white;
+  border: 1px solid var(--border-color);
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.vendors-swiper {
+  padding: 20px 0 40px !important;
+}
+
+.vendor-item.logo-only {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+  cursor: pointer;
+  height: 100px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.vendor-item.logo-only:hover {
+  background: #f8f8f8;
+  transform: translateY(-5px);
+  border-color: var(--primary-color);
+}
+
+.vendor-avatar {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vendor-avatar img {
+  max-width: 100%;
+  max-height: 80%;
+  border-radius: 4px;
+  object-fit: contain;
+  background: transparent;
+  padding: 5px;
+}
+
+/* Removed verify-badge and vendor-info as per logos-only request */
+
+.vendors-swiper .swiper-button-next, 
+.vendors-swiper .swiper-button-prev {
+  background: rgba(255, 255, 255, 0.05);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white !important;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.vendors-swiper .swiper-button-next:after, 
+.vendors-swiper .swiper-button-prev:after {
+  font-size: 1rem !important;
+}
