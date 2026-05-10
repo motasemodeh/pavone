@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Target, Award, ShieldCheck, Zap, MapPin } from 'lucide-react';
 import logoImg from '../assets/pavone-logo.png';

@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { ShieldCheck, Zap, Users, Box, TrendingUp, HeartHandshake, MapPin } from 'lucide-react';
 import './HomeContent.css';
