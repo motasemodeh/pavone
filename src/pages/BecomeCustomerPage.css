@@ -1,0 +1,146 @@
+.quote-page {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.quote-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.quote-header {
+  margin-bottom: 40px;
+}
+
+.quote-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.quote-header p {
+  color: #666;
+}
+
+.special-badge {
+  background: var(--accent-gradient);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-top: 15px;
+}
+
+.quote-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #4a5568;
+}
+
+.required {
+  color: #e53e3e;
+  margin-left: 2px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  font-size: 1rem;
+  background: white;
+  color: #1a202c;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(227, 27, 35, 0.1);
+}
+
+.form-help {
+  font-size: 0.85rem;
+  color: #718096;
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+.btn-primary {
+  display: block;
+  width: 100%;
+  padding: 18px;
+  background: linear-gradient(135deg, #E31B23 0%, #b5151b 100%);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
+  box-shadow: 0 8px 20px rgba(227, 27, 35, 0.25);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(227, 27, 35, 0.35);
+  background: linear-gradient(135deg, #c8161d 0%, #9d1118 100%);
+}
+
+@media (max-width: 768px) {
+  .quote-page {
+    padding: 40px 0;
+  }
+
+  .quote-header h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .quote-header p {
+    text-align: center;
+  }
+
+  .quote-form-container {
+    padding: 0 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .special-badge {
+    display: block;
+    text-align: center;
+    margin: 15px auto 0;
+    max-width: fit-content;
+  }
+}

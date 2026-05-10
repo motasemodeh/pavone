@@ -1,5 +1,6 @@
 
 import { Share2, Mail, Info, Globe } from 'lucide-react';
+import logoImg from '../assets/pavone-logo.png';
 import './Footer.css';
 
 const Footer = () => {
@@ -8,17 +9,20 @@ const Footer = () => {
       <div className="container">
         <div className="footer-top">
           <div className="footer-col brand-col">
-            <h2 className="footer-logo">PAVONE</h2>
-            <p>The world's leading marketplace for premium cigarette and cigar products. Discover authentic items from top vendors.</p>
+            <img src={logoImg} alt="Pavone Distribution" className="footer-logo-img" />
+            <p>Tampa's Trusted Wholesale Distribution Partner. Stock Smarter. Sell Faster. Grow Bigger.</p>
+            <div className="footer-contact-info">
+              <strong>Phone:</strong> (813) 468-6465
+            </div>
           </div>
           
           <div className="footer-col">
             <h4>Marketplace</h4>
             <ul>
               <li><a href="/">Home</a></li>
-              <li><a href="#products">New Arrival</a></li>
-              <li><a href="#products">Most Popular</a></li>
-              <li><a href="#vendors">Top Vendors</a></li>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/become-a-customer">Become a Customer</a></li>
+              <li><a href="/contact">Contact Us</a></li>
             </ul>
           </div>
           

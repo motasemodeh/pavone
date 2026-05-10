@@ -1,14 +1,15 @@
-
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import TopVendors from './components/TopVendors';
 import ProductGrid from './components/ProductGrid';
 import HotCollections from './components/HotCollections';
-import HowItWorks from './components/HowItWorks';
+import HomeContent from './components/HomeContent';
 import Footer from './components/Footer';
-import QuotePage from './pages/QuotePage';
-import AllProductsPage from './pages/AllProductsPage';
+import BecomeCustomerPage from './pages/BecomeCustomerPage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
 
 import { motion } from 'framer-motion';
 
@@ -16,7 +17,7 @@ const HomePage = () => {
   const navigate = useNavigate();
 
   const handleContact = (product: any) => {
-    navigate('/quote', { state: { product } });
+    navigate('/become-a-customer', { state: { product } });
   };
 
   const fadeInUp = {
@@ -28,20 +29,16 @@ const HomePage = () => {
 
   return (
     <>
-      <motion.div {...fadeInUp}>
-        <Hero />
-      </motion.div>
+      <Hero />
       <motion.div {...fadeInUp}>
         <TopVendors />
       </motion.div>
-      <motion.div {...fadeInUp}>
-        <ProductGrid onContact={handleContact} limit={4} />
+      <HomeContent />
+      <motion.div {...fadeInUp} id="products">
+        <ProductGrid onContact={handleContact} />
       </motion.div>
-      <motion.div {...fadeInUp}>
+      <motion.div {...fadeInUp} id="collections">
         <HotCollections />
-      </motion.div>
-      <motion.div {...fadeInUp}>
-        <HowItWorks />
       </motion.div>
     </>
   );
@@ -54,8 +51,9 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/products" element={<AllProductsPage />} />
-          <Route path="/quote" element={<QuotePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/become-a-customer" element={<BecomeCustomerPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />
       </div>

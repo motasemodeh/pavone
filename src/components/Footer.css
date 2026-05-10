@@ -12,13 +12,11 @@
   margin-bottom: 60px;
 }
 
-.footer-logo {
-  font-size: 1.8rem;
-  font-weight: 800;
+.footer-logo-img {
+  height: 60px;
+  width: auto;
   margin-bottom: 20px;
-  background: var(--accent-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  object-fit: contain;
 }
 
 .brand-col p {

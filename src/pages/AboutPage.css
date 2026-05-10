@@ -1,0 +1,274 @@
+.about-page {
+  background-color: #fff;
+}
+
+.section-padding {
+  padding: 100px 0;
+}
+
+/* Enhanced Hero */
+.about-hero-v2 {
+  height: 60vh;
+  min-height: 400px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.about-hero-glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 50px 40px;
+  border-radius: 30px;
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  width: 100%;
+}
+
+.hero-tag {
+  color: var(--primary-color);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.about-hero-v2 h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+/* Split Section */
+.about-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.logo-backdrop {
+  background: #fff5f5;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+}
+
+.floating-logo {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: contain;
+}
+
+.about-split-text h2 {
+  font-size: 2.8rem;
+  margin-bottom: 25px;
+}
+
+/* Philosophy Card */
+.philosophy-card {
+  background: #1a1a2e;
+  border-radius: 40px;
+  padding: 70px 40px;
+  color: white;
+  text-align: center;
+}
+
+.philosophy-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.p-stat span {
+  display: block;
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+/* Values Grid */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.value-item-card {
+  padding: 40px;
+  background: #fff5f5;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.value-item-card:hover {
+  background: white;
+  box-shadow: 0 20px 40px rgba(227, 27, 35, 0.06);
+  border: 1px solid rgba(227, 27, 35, 0.15);
+}
+
+.v-icon {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.value-item-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 12px;
+}
+
+.value-item-card p {
+  color: #718096;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* About split text */
+.accent-text {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.about-features-inline {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.inline-feature {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.inline-icon {
+  color: var(--primary-color);
+  background: #fff5f5;
+  padding: 10px;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.inline-text h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 5px;
+}
+
+.inline-text p {
+  color: #718096;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.about-split-text > p {
+  color: #4a5568;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* Philosophy divider */
+.philosophy-divider {
+  width: 60px;
+  height: 4px;
+  background: var(--accent-gradient);
+  margin: 0 auto 30px;
+  border-radius: 2px;
+}
+
+.philosophy-card h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.philosophy-card > div > p {
+  opacity: 0.85;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.p-stat label {
+  text-transform: uppercase;
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: block;
+}
+
+/* About CTA section */
+.about-cta {
+  background: #f8fafc;
+  text-align: center;
+}
+
+/* CTA Logo */
+.cta-logo-img {
+  height: 80px;
+  width: auto;
+  margin-bottom: 25px;
+  object-fit: contain;
+}
+
+.motto-large {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1a202c;
+}
+
+.motto-sub {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1024px) {
+  .section-padding { padding: 60px 0; }
+  
+  .about-hero-v2 h1 { font-size: 2.2rem; }
+  
+  .about-split-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .logo-backdrop { padding: 40px; }
+  .floating-logo { max-width: 180px; }
+  .about-split-text h2 { font-size: 1.8rem; }
+  .about-features-inline { align-items: center; text-align: center; }
+  .inline-feature { flex-direction: column; align-items: center; }
+
+  .philosophy-card { padding: 40px 20px; border-radius: 25px; }
+  .philosophy-card h2 { font-size: 1.8rem; }
+  .philosophy-stats { grid-template-columns: 1fr; gap: 30px; }
+  .p-stat span { font-size: 2.5rem; }
+
+  .values-grid { grid-template-columns: 1fr; }
+  .value-item-card { padding: 30px 20px; text-align: center; }
+
+  .motto-large { font-size: 1.8rem; }
+}
