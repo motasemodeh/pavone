@@ -81,7 +81,7 @@ const Footer = () => {
         </div>
         
         <div className="footer-bottom">
-          <p>© Copyright 2026 - Pavone by Designesia</p>
+          <p>© Copyright 2026 - Pavone by <a href="https://marketinglegend.us.com/" target="_blank" rel="noopener noreferrer" className="credit-link">Marketing Legend</a></p>
           <div className="social-links">
             <Share2 size={18} />
             <Globe size={18} />

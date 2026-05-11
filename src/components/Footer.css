@@ -118,6 +118,16 @@
   color: var(--primary-color);
 }
 
+.credit-link {
+  color: inherit;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.credit-link:hover {
+  color: var(--primary-color);
+}
+
 @media (max-width: 1024px) {
   .footer-top {
     grid-template-columns: 1fr 1fr;
