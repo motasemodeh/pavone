@@ -60,7 +60,7 @@ const ContactPage = () => {
                 <div className="info-icon"><Mail size={24} /></div>
                 <div className="info-text">
                   <span>Email Us</span>
-                  <strong>sales@pavonedistribution.com</strong>
+                  <strong>pavonedistribution@gmail.com</strong>
                 </div>
               </div>
               

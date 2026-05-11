@@ -6,7 +6,7 @@ header("Content-Type: application/json");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $data = json_decode(file_get_contents("php://input"), true);
     
-    $to = "sales@pavonedistribution.com";
+    $to = "pavonedistribution@gmail.com";
     $subject = isset($data['subject']) ? $data['subject'] : "New Form Submission from Pavone Website";
     
     $message = "New submission details:\n\n";
