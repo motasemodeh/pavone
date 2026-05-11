@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ShieldCheck, Zap, Users, Box, TrendingUp, HeartHandshake, MapPin } from 'lucide-react';
 import './HomeContent.css';
@@ -116,7 +117,7 @@ const HomeContent = () => {
               <h2>Get $100 OFF your first order</h2>
               <p>Whether you own a smoke shop, gas station, convenience store, or hookah lounge — we’re here to help your business grow with top products and competitive pricing.</p>
               <div className="offer-cta-wrapper">
-                <a href="/become-a-customer" className="btn-glass">Apply For Wholesale Account</a>
+                <Link to="/become-a-customer" className="btn-glass">Apply For Wholesale Account</Link>
                 <span className="cta-note">* For new approved retailers only</span>
               </div>
             </div>

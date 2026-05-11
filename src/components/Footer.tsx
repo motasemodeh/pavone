@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom';
 import { Share2, Mail, Info, Globe } from 'lucide-react';
 import logoImg from '../assets/pavone-logo.png';
 import './Footer.css';
@@ -19,10 +20,10 @@ const Footer = () => {
           <div className="footer-col">
             <h4>Marketplace</h4>
             <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/about">About Us</a></li>
-              <li><a href="/become-a-customer">Become a Customer</a></li>
-              <li><a href="/contact">Contact Us</a></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/become-a-customer">Become a Customer</Link></li>
+              <li><Link to="/contact">Contact Us</Link></li>
             </ul>
           </div>
           

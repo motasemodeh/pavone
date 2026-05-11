@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Hero.css';
 import heroVideo from '../assets/Pavone Website.2.mp4';
 
@@ -25,7 +26,7 @@ const Hero = () => {
           </h1>
           <div className="hero-cta-group">
             <a href="#products" className="btn-primary-large">Browse Inventory</a>
-            <a href="/become-a-customer" className="btn-secondary-large">Open Wholesale Account</a>
+            <Link to="/become-a-customer" className="btn-secondary-large">Open Wholesale Account</Link>
           </div>
         </div>
       </div>

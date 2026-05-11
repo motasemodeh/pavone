@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Target, Award, ShieldCheck, Zap, MapPin } from 'lucide-react';
 import logoImg from '../assets/pavone-logo.png';
@@ -132,7 +133,7 @@ const AboutPage = () => {
             <img src={logoImg} alt="Pavone Logo" className="cta-logo-img" />
             <div className="motto-large">Pavone Distribution</div>
             <div className="motto-sub">Stock Smarter. Sell Faster. Grow Bigger.</div>
-            <a href="/become-a-customer" className="btn-primary-large mt-4">Become a Partner Today</a>
+            <Link to="/become-a-customer" className="btn-primary-large mt-4">Become a Partner Today</Link>
           </motion.div>
         </div>
       </section>
