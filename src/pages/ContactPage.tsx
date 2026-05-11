@@ -16,12 +16,15 @@ const ContactPage = () => {
     setStatus('loading');
 
     try {
-      const response = await fetch('https://formspree.io/f/xanykgzo', {
+      const response = await fetch('/send-email.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify({
+          ...formData,
+          subject: `Contact Form: ${formData.fullName}`
+        })
       });
 
       if (response.ok) {

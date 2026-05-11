@@ -26,12 +26,15 @@ const BecomeCustomerPage = () => {
     setStatus('loading');
 
     try {
-      const response = await fetch('https://formspree.io/f/xanykgzo', {
+      const response = await fetch('/send-email.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify({
+          ...formData,
+          subject: `Wholesale Application: ${formData.firstName} ${formData.lastName} (${formData.businessName})`
+        })
       });
 
       if (response.ok) {

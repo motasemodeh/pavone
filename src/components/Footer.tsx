@@ -13,7 +13,7 @@ const Footer = () => {
     e.preventDefault();
     if (email) {
       try {
-        const response = await fetch('https://formspree.io/f/xanykgzo', {
+        const response = await fetch('/send-email.php', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
