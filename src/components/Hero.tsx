@@ -25,7 +25,7 @@ const Hero = () => {
             Pavone Distribution — Your One-Stop Wholesale Destination for Smoke Shops, Gas Stations, Grocery Stores & More.
           </h1>
           <div className="hero-cta-group">
-            <a href="#products" className="btn-primary-large">Browse Inventory</a>
+            <a href="#different" className="btn-primary-large">Why Choose Us</a>
             <Link to="/become-a-customer" className="btn-secondary-large">Open Wholesale Account</Link>
           </div>
         </div>
