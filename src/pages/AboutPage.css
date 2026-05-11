@@ -54,20 +54,35 @@
   align-items: center;
 }
 
-.logo-backdrop {
-  background: #fff5f5;
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 60px;
+.store-visual-wrapper {
+  position: relative;
+  padding: 15px;
 }
 
-.floating-logo {
+.about-store-img {
   width: 100%;
-  max-width: 300px;
-  height: auto;
-  object-fit: contain;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 2;
+  transition: transform 0.4s ease;
+}
+
+.store-visual-wrapper:hover .about-store-img {
+  transform: translateY(-10px);
+}
+
+.image-accent-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--primary-color);
+  border-radius: 25px;
+  z-index: 1;
+  transform: translate(-15px, 15px);
+  opacity: 0.2;
 }
 
 .about-split-text h2 {

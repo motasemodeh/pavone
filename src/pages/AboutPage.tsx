@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Target, Award, ShieldCheck, Zap, MapPin } from 'lucide-react';
 import logoImg from '../assets/pavone-logo.png';
+import storeImg from '../assets/pavone-store.jpeg';
 import './AboutPage.css';
 
 const AboutPage = () => {
@@ -35,8 +36,9 @@ const AboutPage = () => {
         <div className="container">
           <div className="about-split-grid">
             <motion.div {...fadeInUp} className="about-split-image">
-              <div className="logo-backdrop">
-                <img src={logoImg} alt="Pavone Logo" className="floating-logo" />
+              <div className="store-visual-wrapper">
+                <img src={storeImg} alt="Pavone Store" className="about-store-img" />
+                <div className="image-accent-border"></div>
               </div>
             </motion.div>
             

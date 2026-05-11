@@ -1,10 +1,37 @@
 
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Share2, Mail, Info, Globe } from 'lucide-react';
+import { Share2, Mail, Info, Globe, CheckCircle2 } from 'lucide-react';
 import logoImg from '../assets/pavone-logo.png';
 import './Footer.css';
 
 const Footer = () => {
+  const [email, setEmail] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (email) {
+      try {
+        const response = await fetch('https://formspree.io/f/xanykgzo', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ email, subject: 'New Newsletter Subscription' })
+        });
+
+        if (response.ok) {
+          setSubmitted(true);
+          setEmail('');
+          setTimeout(() => setSubmitted(false), 5000);
+        }
+      } catch (error) {
+        console.error('Newsletter error:', error);
+      }
+    }
+  };
+
   return (
     <footer className="footer">
       <div className="container">
@@ -27,23 +54,28 @@ const Footer = () => {
             </ul>
           </div>
           
-          <div className="footer-col">
-            <h4>Resources</h4>
-            <ul>
-              <li><a href="#">Help Center</a></li>
-              <li><a href="#">Partners</a></li>
-              <li><a href="#">Suggestions</a></li>
-              <li><a href="#">Newsletter</a></li>
-            </ul>
-          </div>
-          
           <div className="footer-col newsletter-col">
             <h4>Newsletter</h4>
             <p>Signup for our newsletter to get the latest news in your inbox.</p>
-            <div className="newsletter-form">
-              <input type="email" placeholder="enter your email" />
-              <button>→</button>
-            </div>
+            
+            {submitted ? (
+              <div className="newsletter-success">
+                <CheckCircle2 size={20} color="#10b981" />
+                <span>Thank you for subscribing!</span>
+              </div>
+            ) : (
+              <form className="newsletter-form" onSubmit={handleNewsletterSubmit}>
+                <input 
+                  type="email" 
+                  placeholder="enter your email" 
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <button type="submit">→</button>
+              </form>
+            )}
+            
             <p className="small-text">Your email is safe with us. We don't spam.</p>
           </div>
         </div>

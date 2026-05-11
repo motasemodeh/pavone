@@ -9,11 +9,31 @@ const ContactPage = () => {
     phone: '',
     message: '',
   });
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert('Thank you for your message! Our team will get back to you shortly.');
-    setFormData({ fullName: '', email: '', phone: '', message: '' });
+    setStatus('loading');
+
+    try {
+      const response = await fetch('https://formspree.io/f/xanykgzo', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        setFormData({ fullName: '', email: '', phone: '', message: '' });
+        setTimeout(() => setStatus('idle'), 5000);
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      setStatus('error');
+    }
   };
 
   return (
@@ -105,7 +125,20 @@ const ContactPage = () => {
                 />
               </div>
 
-              <button type="submit" className="btn-primary-large">Send Message</button>
+              <button 
+                type="submit" 
+                className={`btn-primary-large ${status === 'loading' ? 'loading' : ''}`}
+                disabled={status === 'loading'}
+              >
+                {status === 'loading' ? 'Sending...' : status === 'success' ? 'Message Sent!' : 'Send Message'}
+              </button>
+              
+              {status === 'success' && (
+                <p className="form-status-msg success">Your message has been sent successfully!</p>
+              )}
+              {status === 'error' && (
+                <p className="form-status-msg error">Something went wrong. Please try again or call us directly.</p>
+              )}
             </form>
           </div>
         </div>

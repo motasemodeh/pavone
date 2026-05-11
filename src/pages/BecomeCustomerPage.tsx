@@ -19,11 +19,32 @@ const BecomeCustomerPage = () => {
     zipCode: '',
     message: product.title !== 'General Inquiry' ? `I am interested in ${product.title} for my shop.` : '',
   });
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert('Thank you for applying! Our team will review your wholesale account application and contact you soon.');
-    navigate('/');
+    setStatus('loading');
+
+    try {
+      const response = await fetch('https://formspree.io/f/xanykgzo', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        setTimeout(() => {
+          navigate('/');
+        }, 3000);
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      setStatus('error');
+    }
   };
 
   return (
@@ -149,7 +170,20 @@ const BecomeCustomerPage = () => {
               />
             </div>
 
-            <button type="submit" className="btn-primary">Submit Application</button>
+            <button 
+              type="submit" 
+              className={`btn-primary ${status === 'loading' ? 'loading' : ''}`}
+              disabled={status === 'loading'}
+            >
+              {status === 'loading' ? 'Sending Application...' : status === 'success' ? 'Application Sent!' : 'Submit Application'}
+            </button>
+
+            {status === 'success' && (
+              <p className="form-status-msg success">Thank you! Your application has been sent. Redirecting...</p>
+            )}
+            {status === 'error' && (
+              <p className="form-status-msg error">Something went wrong. Please try again or email us directly.</p>
+            )}
           </form>
         </div>
       </div>
