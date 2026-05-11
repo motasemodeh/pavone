@@ -1,39 +1,39 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import 'swiper/css';
+import 'swiper/css/navigation';
 import './TopVendors.css';
 
+// Local logo imports
+import grabbaLeaf from '../assets/logo/Grabba-Leaf-Logo.webp';
+import lmLogo from '../assets/logo/L&m_cigarettes_logo.png';
+import marlboroLogo from '../assets/logo/Marlboro_Logo.svg';
+import nasLogo from '../assets/logo/NASlogo.png';
+import newportLogo from '../assets/logo/Newport_cigarettes_logo.png';
+import recursoDDV from '../assets/logo/Recurso_2DDV.webp';
+import offStamp from '../assets/logo/off-stamp.jpg';
+import universalShield from '../assets/logo/universal-shield.webp';
+import brandImg1 from '../assets/logo/1 (7).jpg';
+import zzBoris from '../assets/logo/ZZ-Boris-w-frame-bw.jpg';
+import duccysLogo from '../assets/logo/788444_a8de85da68974fe3b059bd851e1f386d_mv2_2400x.webp';
+import blackGoldLogo from '../assets/logo/Black_Logo_with_Gold_c18d76ed-1f22-4ec6-a553-28dde6cb49f1.webp';
+import recurso2Logo from '../assets/logo/Recurso_2.webp';
+
 const brands = [
-  { id: 1, name: 'Marlboro', logo: 'https://www.vectorlogo.zone/logos/marlboro/marlboro-ar21.svg' },
-  { id: 2, name: 'Dunhill', logo: 'https://www.vectorlogo.zone/logos/dunhill/dunhill-ar21.svg' },
-  { id: 3, name: 'Davidoff', logo: 'https://www.vectorlogo.zone/logos/davidoff/davidoff-ar21.svg' },
-  { id: 4, name: 'Cohiba', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Cohiba_Logo.svg/1200px-Cohiba_Logo.svg.png' },
-  { id: 5, name: 'Camel', logo: 'https://www.vectorlogo.zone/logos/camel/camel-ar21.svg' },
-  { id: 6, name: 'Winston', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Winston_logo.svg/1200px-Winston_logo.svg.png' },
-  { id: 7, name: 'Lucky Strike', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Lucky_Strike_logo.svg/1200px-Lucky_Strike_logo.svg.png' },
-  { id: 8, name: 'Pall Mall', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Pall_Mall_logo.svg/1200px-Pall_Mall_logo.svg.png' },
-  { id: 9, name: 'Parliament', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Parliament_Cigarettes_Logo.svg/1200px-Parliament_Cigarettes_Logo.svg.png' },
-  { id: 10, name: 'L&M', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/LM_logo.svg/1200px-LM_logo.svg.png' },
-  { id: 11, name: 'Virginia Slims', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Virginia_Slims_logo.svg/1200px-Virginia_Slims_logo.svg.png' },
-  { id: 12, name: 'Kent', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Kent_logo.svg/1200px-Kent_logo.svg.png' },
-  { id: 13, name: 'Zyn', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/ZYN_Logo.svg/1200px-ZYN_Logo.svg.png' },
-  { id: 14, name: 'Velo', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Velo_logo.svg/1200px-Velo_logo.svg.png' },
-  { id: 15, name: 'Juul', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Juul_Logo.svg/1200px-Juul_Logo.svg.png' },
-  { id: 16, name: 'Raw', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/RAW_logo.svg/1200px-RAW_logo.svg.png' },
-  { id: 17, name: 'Zig-Zag', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Zig_Zag_Logo.svg/1200px-Zig_Zag_Logo.svg.png' },
-  { id: 18, name: 'Swisher Sweets', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Swisher_Sweets_logo.svg/1200px-Swisher_Sweets_logo.svg.png' },
-  { id: 19, name: 'Backwoods', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Backwoods_Logo.svg/1200px-Backwoods_Logo.svg.png' },
-  { id: 20, name: 'Clipper', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Clipper_logo.svg/1200px-Clipper_logo.svg.png' },
-  { id: 21, name: 'Bic', logo: 'https://www.vectorlogo.zone/logos/bic/bic-ar21.svg' },
-  { id: 22, name: 'Coca-Cola', logo: 'https://www.vectorlogo.zone/logos/cocacola/cocacola-ar21.svg' },
-  { id: 23, name: 'Pepsi', logo: 'https://www.vectorlogo.zone/logos/pepsi/pepsi-ar21.svg' },
-  { id: 24, name: 'Red Bull', logo: 'https://www.vectorlogo.zone/logos/redbull/redbull-ar21.svg' },
-  { id: 25, name: 'Monster', logo: 'https://www.vectorlogo.zone/logos/monsterenergy/monsterenergy-ar21.svg' },
-  { id: 26, name: 'Frito-Lay', logo: 'https://www.vectorlogo.zone/logos/fritolay/fritolay-ar21.svg' },
-  { id: 27, name: 'Mars', logo: 'https://www.vectorlogo.zone/logos/mars/mars-ar21.svg' },
-  { id: 28, name: 'Hershey', logo: 'https://www.vectorlogo.zone/logos/hersheys/hersheys-ar21.svg' },
-  { id: 29, name: 'Storz & Bickel', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Storz_and_Bickel_Logo.svg/1200px-Storz_and_Bickel_Logo.svg.png' },
-  { id: 30, name: 'Santa Cruz Shredder', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0&s' },
+  { id: 1, name: 'Marlboro', logo: marlboroLogo },
+  { id: 2, name: 'Newport', logo: newportLogo },
+  { id: 3, name: 'L&M', logo: lmLogo },
+  { id: 4, name: 'Grabba Leaf', logo: grabbaLeaf },
+  { id: 5, name: 'NAS', logo: nasLogo },
+  { id: 6, name: 'Recurso DDV', logo: recursoDDV },
+  { id: 7, name: 'Off Stamp', logo: offStamp },
+  { id: 8, name: 'Universal Shield', logo: universalShield },
+  { id: 9, name: 'Brand', logo: brandImg1 },
+  { id: 10, name: 'ZZ Boris', logo: zzBoris },
+  { id: 11, name: "Duccy's", logo: duccysLogo },
+  { id: 12, name: 'Black Gold', logo: blackGoldLogo },
+  { id: 13, name: 'Recurso 2', logo: recurso2Logo },
 ];
 
 const TopVendors = () => {

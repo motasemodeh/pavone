@@ -1,9 +1,7 @@
-import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import TopVendors from './components/TopVendors';
-import ProductGrid from './components/ProductGrid';
-import HotCollections from './components/HotCollections';
 import HomeContent from './components/HomeContent';
 import Footer from './components/Footer';
 import BecomeCustomerPage from './pages/BecomeCustomerPage';
@@ -13,12 +11,6 @@ import ContactPage from './pages/ContactPage';
 import { motion } from 'framer-motion';
 
 const HomePage = () => {
-  const navigate = useNavigate();
-
-  const handleContact = (product: any) => {
-    navigate('/become-a-customer', { state: { product } });
-  };
-
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
@@ -33,12 +25,6 @@ const HomePage = () => {
         <TopVendors />
       </motion.div>
       <HomeContent />
-      <motion.div {...fadeInUp} id="products">
-        <ProductGrid onContact={handleContact} />
-      </motion.div>
-      <motion.div {...fadeInUp} id="collections">
-        <HotCollections />
-      </motion.div>
     </>
   );
 };
