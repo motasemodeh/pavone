@@ -46,7 +46,7 @@ const AboutPage = () => {
               <span className="accent-text">Who We Are</span>
               <h2>Supporting Your Success</h2>
               <p>
-                At Pavone Distribution, we are dedicated to helping retailers succeed by providing high-quality wholesale products, competitive pricing, and reliable service. Based in Tampa, Florida, we proudly supply smoke shops, gas stations, convenience stores, and retail businesses with the products their customers demand most.
+                Since 1986, Pavone Distribution has been dedicated to helping retailers succeed by providing high-quality wholesale products, competitive pricing, and reliable service. Based in Tampa, Florida, we proudly supply smoke shops, gas stations, convenience stores, and retail businesses with the products their customers demand most.
               </p>
               <div className="about-features-inline">
                 <div className="inline-feature">
@@ -80,6 +80,10 @@ const AboutPage = () => {
                 We believe distribution is more than moving products — it’s about building relationships and supporting the growth of our clients. Our team focuses on dependable service, fast communication, and helping businesses find the right products at the right time.
               </p>
               <div className="philosophy-stats">
+                <div className="p-stat">
+                  <span>1986</span>
+                  <label>Established</label>
+                </div>
                 <div className="p-stat">
                   <span>500+</span>
                   <label>Partners</label>
